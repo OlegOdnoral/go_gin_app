@@ -1,0 +1,2 @@
+### Impornant notes
+* For run go program with watch on change use <code>realize start --run --no-config</code> (required [realize](https://github.com/oxequa/realize) pakcage <code>go get github.com/oxequa/realize</code>)
