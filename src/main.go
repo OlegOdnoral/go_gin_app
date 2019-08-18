@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 
+	"github.com/Tempeny/gin_tes/src/database"
+
 	"github.com/Tempeny/gin_tes/src/routes"
 )
 
@@ -11,6 +13,9 @@ const (
 )
 
 func main() {
+	database.InitConnectionToDB()
+	defer database.CloseDBConnection()
+
 	fmt.Println("Hello from GO 2")
 	routes.RunAndServe(port)
 }
