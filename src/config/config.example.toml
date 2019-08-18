@@ -1,0 +1,7 @@
+App = "App name"
+
+[database]
+Addr = "127.0.0.1:8080"
+User = "user_name"
+Password = "password"
+Database = "db_name"

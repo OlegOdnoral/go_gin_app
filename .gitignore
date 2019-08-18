@@ -1,6 +1,9 @@
 # Dependencies folder
 /vendor
 
+# Ignore config file
+/src/config/config.toml
+
 # Binaries for programs and plugins
 *.exe
 *.exe~
