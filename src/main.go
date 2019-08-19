@@ -3,8 +3,6 @@ package main
 import (
 	"fmt"
 
-	"github.com/Tempeny/gin_tes/src/config"
-
 	"github.com/Tempeny/gin_tes/src/database"
 
 	"github.com/Tempeny/gin_tes/src/routes"
@@ -18,8 +16,6 @@ func main() {
 	database.InitConnectionToDB()
 	defer database.CloseDBConnection()
 
-	config.GetConfig()
-
-	fmt.Println("Hello from GO 2")
+	fmt.Println("Hello from GO GIN App")
 	routes.RunAndServe(port)
 }

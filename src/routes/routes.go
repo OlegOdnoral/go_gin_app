@@ -14,7 +14,6 @@ func addMiddlewares(r *gin.Engine) {
 func RunAndServe(port string) {
 	r := gin.Default()
 	addMiddlewares(r)
-
 	auth.RegHandlers(r)
 
 	r.Run(port)

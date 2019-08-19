@@ -7,23 +7,22 @@ import (
 )
 
 type config struct {
-	App string
-	DB  database `toml:"database"`
+	DB DatabaseConfig `toml:"database"`
 }
 
-type database struct {
-	Addr     string
-	User     string
-	Password string
-	Database string
+type DatabaseConfig struct {
+	Addr            string
+	User            string
+	Password        string
+	Database        string
+	ApplicationName string
 }
 
-func GetConfig() {
-	var data config
-	if _, err := toml.DecodeFile("src/config/config.toml", &data); err != nil {
+func GetDBConfig() (DatabaseConfig, error) {
+	var configData config
+	if _, err := toml.DecodeFile("src/config/config.toml", &configData); err != nil {
 		fmt.Println(err)
-		return
+		return DatabaseConfig{}, err
 	}
-	fmt.Printf("%+v\n", data)
-
+	return configData.DB, nil
 }
