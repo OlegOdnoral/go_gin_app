@@ -18,7 +18,7 @@ func HandleTest(c *gin.Context) {
 func SigninHandler(c *gin.Context) {
 	var user signinHandlerModel
 	if err := c.ShouldBindJSON(&user); err != nil {
-		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error})
 		return
 	}
 	fmt.Printf("%+v\n", user)
@@ -29,10 +29,24 @@ func SigninHandler(c *gin.Context) {
 
 //SignupHandler handle post request on /auth/signup
 func SignupHandler(c *gin.Context) {
-
+	var newUser signupHandlerModel
+	if err := c.ShouldBindJSON(&newUser); err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error})
+	}
+	fmt.Printf("%+v\n", newUser)
+	c.JSON(200, gin.H{
+		"message": "Done",
+	})
 }
 
 //ForgotPasswordHandler handle post request on /auth/forgot-password
 func ForgotPasswordHandler(c *gin.Context) {
-
+	var dropPaswordFoUser forgotPasswordMode
+	if err := c.ShouldBindJSON(&dropPaswordFoUser); err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error})
+	}
+	fmt.Printf("%+v\n", dropPaswordFoUser)
+	c.JSON(200, gin.H{
+		"message": "Done",
+	})
 }
