@@ -3,7 +3,6 @@ package middleware
 import (
 	"fmt"
 
-	"github.com/Tempeny/gin_tes/src/database"
 	"github.com/gin-gonic/gin"
 )
 
@@ -15,7 +14,6 @@ func JWTMiddleware() gin.HandlerFunc {
 			c.AbortWithStatus(403)
 		}
 		fmt.Println(c.GetHeader("Authorization"))
-		database.PoolStats()
 		c.Next()
 	}
 }

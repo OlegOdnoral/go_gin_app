@@ -1,7 +1,6 @@
 package database
 
 import (
-	"fmt"
 	"log"
 
 	"github.com/Tempeny/gin_tes/src/config"
@@ -12,6 +11,7 @@ var (
 	dbConnection *pg.DB
 )
 
+//InitConnectionToDB set config for database connetion from config.toml file
 func InitConnectionToDB() {
 	if dbConfig, err := config.GetDBConfig(); err != nil {
 		log.Fatalln("Invalid DB config")
@@ -29,10 +29,7 @@ func InitConnectionToDB() {
 
 }
 
-func PoolStats() {
-	fmt.Printf("%+v\n", dbConnection.PoolStats())
-}
-
+//CloseDBConnection close database connection
 func CloseDBConnection() {
 	dbConnection.Close()
 }

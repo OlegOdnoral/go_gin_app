@@ -7,12 +7,14 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+//HandleTest handle get request on /auth/test
 func HandleTest(c *gin.Context) {
 	c.JSON(200, gin.H{
 		"message": "Done",
 	})
 }
 
+//SigninHandler handle post request on /auth/signin
 func SigninHandler(c *gin.Context) {
 	var user signinHandlerModel
 	if err := c.ShouldBindJSON(&user); err != nil {
@@ -25,10 +27,12 @@ func SigninHandler(c *gin.Context) {
 	})
 }
 
+//SignupHandler handle post request on /auth/signup
 func SignupHandler(c *gin.Context) {
 
 }
 
+//ForgotPasswordHandler handle post request on /auth/forgot-password
 func ForgotPasswordHandler(c *gin.Context) {
 
 }
