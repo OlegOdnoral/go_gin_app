@@ -3,7 +3,7 @@ package database
 import (
 	"log"
 
-	"github.com/Tempeny/gin_tes/src/config"
+	"github.com/OlegOdnoral/go_gin_app/src/config"
 	"github.com/go-pg/pg"
 )
 

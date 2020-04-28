@@ -1,8 +1,8 @@
 package routes
 
 import (
-	"github.com/Tempeny/gin_tes/src/middleware"
-	"github.com/Tempeny/gin_tes/src/routes/auth"
+	"github.com/OlegOdnoral/go_gin_app/src/middleware"
+	"github.com/OlegOdnoral/go_gin_app/src/routes/auth"
 	"github.com/gin-gonic/gin"
 )
 

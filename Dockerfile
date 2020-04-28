@@ -4,11 +4,11 @@ LABEL app_name="golang gin test app"
 
 LABEL maintainer="Oleg_Odnoral"
 
-ADD . /go/src/github.com/Tempeny/gin_tes
+ADD . /go/src/github.com/OlegOdnoral/go_gin_app
 
 RUN go get -u github.com/golang/dep/cmd/dep
 
-WORKDIR /go/src/github.com/Tempeny/gin_tes
+WORKDIR /go/src/github.com/OlegOdnoral/go_gin_app
 
 RUN dep ensure
 

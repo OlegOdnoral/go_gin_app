@@ -1,1 +1,1 @@
-gin_tes
+go_gin_app

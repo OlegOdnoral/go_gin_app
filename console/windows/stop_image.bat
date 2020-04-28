@@ -1,6 +1,6 @@
-docker kill gin_test
+docker kill go_gin_appt
 
-@echo gin_test was stopped
+@echo go_gin_appt was stopped
 
 docker container ls
 

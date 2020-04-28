@@ -23,6 +23,7 @@ type DatabaseConfig struct {
 func GetDBConfig() (DatabaseConfig, error) {
 	var configData config
 	if _, err := toml.DecodeFile("src/config/config.toml", &configData); err != nil {
+		fmt.Println(322)
 		fmt.Println(err)
 		return DatabaseConfig{}, err
 	}

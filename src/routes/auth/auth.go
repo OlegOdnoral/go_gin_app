@@ -1,7 +1,7 @@
 package auth
 
 import (
-	"github.com/Tempeny/gin_tes/src/routes/handlers/authhandlers"
+	"github.com/OlegOdnoral/go_gin_app/src/routes/handlers/authhandlers"
 	"github.com/gin-gonic/gin"
 )
 
